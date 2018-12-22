@@ -77,19 +77,12 @@ function createMap(earthquakeData) {
     accessToken: API_KEY
   });
 
-  var lightMap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
-    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-    maxZoom: 18,
-    id: "mapbox.light",
-    accessToken: API_KEY
-  });
-
   var baseMaps = {
     "Satellite Map": satelliteMap,
     "Outdoors Map": outdoorMap,
     "Street Map": streetsMap,
     "Light Map": lightMap,
-    "Dark Map": lightMap
+    "Dark Map": darkMap
   };
 
   var tectonicPlatesUrl = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
